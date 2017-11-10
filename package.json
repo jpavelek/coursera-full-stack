@@ -12,5 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.2.2"
+  },
+  "dependencies": {
+    "bootstrap-v4-dev": "^4.0.0-alpha.6"
   }
 }
