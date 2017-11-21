@@ -37,14 +37,3 @@ body {
 .navbar-inverse {
 	background-color: #512da8;
 }
-
-.card-body {		/* This should have been already provided by Bootstrap, but is set to 0px for me */
-	padding: 15px;
-}
-
-label.form-radio-label {   /* Fixing some werid Bootstrap visuals */
-	margin-left: 5px;
-	vertical-align: middle;
-	margin-bottom: 0px;
-	margin-right: 14px;
-}

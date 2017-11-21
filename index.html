@@ -18,7 +18,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30px" width="41px"></a>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="41" alt="brand logo"></a> <!-- no "px", validator did not like them -->
             <div id="Navbar" class="collapse navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="#"><span class="fa fa-home"></span> Home</a></li>
@@ -37,11 +37,13 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm-3 align-self-center" align="center">
-                    <img src="img/logo.png" class="img-fluid">
+                <div class="col-12 col-sm-3 align-self-center">
+                    <img src="img/logo.png" class="img-fluid" alt="Logo" style="margin-left:auto; margin-right:auto; display:block;">
+                    <!-- I had to add manual styling here ^^^ because align-self-center did not work for me :=/ -->
                 </div>
-                <div class="col-12 col-sm-3 align-self-center" align="center">
-                    <a class="btn btn-sm btn-warning" href="#resform">Reserve Table</a>
+                <div class="col-12 col-sm-3 align-self-center">
+                    <a class="btn btn-sm btn-block btn-warning" style="margin-left:auto; margin-right:auto; display:block;" href="#resform">Reserve Table</a>
+                    <!-- Same here, I had to add manual styling here ^^^ because align-self-center did not work for me :=/ -->
                 </div>
             </div>
         </div>
@@ -54,7 +56,7 @@
             </div>
             <div class="col-sm-8 pull-sm-4 col-md-9 pull-md-3">
                 <div class="media">
-                    <img src="img/uthappizza.png" class="d-flex mr-3 img-thumbnail align-self-center" alt="uthappizza">
+                    <img src="img/uthappizza.png" class="d-flex mr-3 img-thumbnail align-self-center" alt="uthappizza image">
                     <div class="media-body">
                         <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default">$4.99</span></h2>
                         <p class="hidden-xs-down">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
@@ -71,10 +73,10 @@
             <div class="col-sm col-md">
                 <div class="media">
                     <div class="media-body">
-                        <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
                         <p class="hidden-xs-down">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                     </div>
-                    <img src="img/buffet.png" class="img-thumbnail align-self-center ml-3" alt="buffet">
+                    <img src="img/buffet.png" class="d-flex ml-3 img-thumbnail align-self-center" alt="buffet image">
                 </div>
             </div>
         </div>
@@ -101,44 +103,68 @@
                     
                     <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
 
-                    <div class="card-body">
-                    <form>
-                        <div class="form-group row">
-                            <div class="col-12 col-md-3">
-                                <label for="nr_of_guests">Number of Guests</label>
-                            </div>
-                            <div class="col-12 col-md-8 offset-md-1 d-flex align-items-center form-check form-check-inline">
-                                <input type="radio" class="form-radio-input" name="nr_of_guests" value="1" id="r1"><label for="r1" class="form-radio-label">1</label>
-                                <input type="radio" class="form-radio-input" name="nr_of_guests" value="1" id="r1"><label for="r2" class="form-radio-label">2</label>
-                                <input type="radio" class="form-radio-input" name="nr_of_guests" value="1" id="r1"><label for="r3" class="form-radio-label">3</label>
-                                <input type="radio" class="form-radio-input" name="nr_of_guests" value="1" id="r1"><label for="r4" class="form-radio-label">4</label>
-                                <input type="radio" class="form-radio-input" name="nr_of_guests" value="1" id="r1"><label for="r5" class="form-radio-label">5</label>
-                                <input type="radio" class="form-radio-input" name="nr_of_guests" value="1" id="r1"><label for="r6" class="form-radio-label">6</label>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-12 col-md-3">
-                                <label>Date and Time</label>
-                            </div>
-                            <div class="col-12 col-md-4 offset-md-1">
-                                <div class="input-group">
-                                    <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
-                                    <input type="text" name="date" class="form-control" id="date" placeholder="Date">
+                    <div class="card-body card-block">    <!-- Had to add the card-block to get padding that did not come with card-body -->
+                        <form>
+                            <div class="row form-group">  
+                                <div class="col-12 col-md-3">
+                                    <label>Number of Guests</label>
+                                </div>
+                                <div class="col-12 col-md-8 offset-md-1 d-flex align-items-center">
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-radio-input" name="nr_of_guests" value="1" id="r1"> 1
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-radio-input" name="nr_of_guests" value="2" id="r2"> 2
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-radio-input" name="nr_of_guests" value="3" id="r3"> 3
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-radio-input" name="nr_of_guests" value="4" id="r4"> 4
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-radio-input" name="nr_of_guests" value="5" id="r5"> 5
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-radio-input" name="nr_of_guests" value="6" id="r6"> 6
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-4">
-                                <div class="input-group">
-                                    <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
-                                    <input type="text" name="time" class="form-control" id="time" placeholder="Time">
+                            <div class="row form-group">
+                                <div class="col-12 col-md-3">
+                                    <label>Date and Time</label>
+                                </div>
+                                <div class="col-12 col-md-4 offset-md-1">
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                        <input type="text" name="date" class="form-control" id="date" placeholder="Date">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+                                        <input type="text" name="time" class="form-control" id="time" placeholder="Time">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col offset-md-4">
-                                <button type="submit" class="btn btn-primary">Reserve</button>
+                            <div class="row form-group">
+                                <div class="col offset-md-4">
+                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
                     </div>
                 </div>
             </div>
