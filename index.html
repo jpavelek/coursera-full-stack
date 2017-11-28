@@ -42,7 +42,10 @@
                     <!-- I had to add manual styling here ^^^ because align-self-center did not work for me :=/ -->
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a class="btn btn-sm btn-block btn-warning" style="margin-left:auto; margin-right:auto; display:block;" href="#resform">Reserve Table</a>
+                    <a class="btn btn-sm btn-block btn-warning" 
+                        data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+852 123 456</strong>" data-placement="bottom" 
+                        style="margin-left:auto; margin-right:auto; display:block;" 
+                        href="#resform">Reserve Table</a>
                     <!-- Same here, I had to add manual styling here ^^^ because align-self-center did not work for me :=/ -->
                 </div>
             </div>
@@ -216,6 +219,11 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 
 </html>
