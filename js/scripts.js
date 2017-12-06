@@ -11,4 +11,10 @@ $(document).ready(function(){
             $("#carousel-button").children("span").removeClass("fa-play");
         }
     });
+    $("#btn_reserve_table").click(function() {
+        $("#reservationModal").modal("show");
+    });
+    $("#btn_login").click(function(){
+        $("#loginModal").modal("show");
+    });
 });

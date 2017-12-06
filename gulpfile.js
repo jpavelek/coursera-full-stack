@@ -12,10 +12,10 @@ var cleanCss = require('gulp-clean-css');
 var flatmap = require('gulp-flatmap');
 var htmlmin = require('gulp-htmlmin');
 
-gulp.task ('sass', function() {
-	return gulp.src('./css/*.sass')
-	.pipe(sass().on('error', sass.logError)
-	.pipe(gulp.dest('./css')));
+gulp.task('sass', function () {
+	return gulp.src('./css/*.scss')
+	.pipe(sass().on('error', sass.logError))
+	.pipe(gulp.dest('./css'));
 });
 
 gulp.task('sass:watch', function(){

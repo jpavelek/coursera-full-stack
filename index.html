@@ -27,8 +27,8 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
-                <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                <span id="btn_login" class="navbar-text">
+                    <a>
                         <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
@@ -171,10 +171,9 @@
                     <!-- I had to add manual styling here ^^^ because align-self-center did not work for me :=/ -->
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a class="btn btn-sm btn-block btn-warning" 
-                        data-toggle="modal" data-target="#reservationModal"
-                        style="margin-left:auto; margin-right:auto; display:block;" 
-                        href="#resform">Reserve Table</a>
+                    <a class="btn btn-sm btn-block btn-warning"
+                        style="margin-left:auto; margin-right:auto; display:block;"
+                        id="btn_reserve_table">Reserve Table</a>
                     <!-- Same here, I had to add manual styling here ^^^ because align-self-center did not work for me :=/ -->
                 </div>
             </div>
